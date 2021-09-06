@@ -11,7 +11,7 @@ const Country = ({ country }) => {
         key={country.id}
         to={`/details/${country.id}`}
         onClick={() => {
-          dispatch(loadCountry(country));
+          dispatch(loadCountry(true));
         }}
         value={country.id}
       >

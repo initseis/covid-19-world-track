@@ -11,29 +11,19 @@ const Navbar = () => {
   return (
     <div>
       {countrySelected && (
-        <Link
-          to="/home"
-          onClick={() => {
-            dispatch(backHome());
-          }}
-        >
-          back
-        </Link>
-      )}
-      {countrySelected && (
         <>
-          <h2>{countrySelected.name}</h2>
-          <h3>
-            Confirmed cases:
-            {countrySelected.today_confirmed}
-          </h3>
-          <h3>
-            Confirmed deaths:
-            {countrySelected.today_deaths}
-          </h3>
+          <Link
+            to="/home"
+            onClick={() => {
+              dispatch(backHome());
+            }}
+          >
+            back
+          </Link>
+          <h1>Covid World Track</h1>
         </>
       )}
-      {!countrySelected && <h1>Covid Today</h1>}
+      {!countrySelected && <h1>Covid World Track</h1>}
     </div>
   );
 };

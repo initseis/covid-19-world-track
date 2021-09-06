@@ -10,6 +10,15 @@ const Details = ({ match }) => {
   );
   return (
     <div>
+      <h2>{country.name}</h2>
+      <h3>
+        Confirmed cases:
+        {country.today_confirmed}
+      </h3>
+      <h3>
+        Confirmed deaths:
+        {country.today_deaths}
+      </h3>
       <ul>
         {country.regions.map((r) => (
           <Region key={r.name} region={r} />
