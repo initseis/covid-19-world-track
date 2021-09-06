@@ -1,8 +1,9 @@
-import axios from "axios";
-const LOAD = "react-capstone/countries/LOAD";
-const REQUEST = "react-capstone/countries/REQUEST";
-const LOAD_COUNTRY = "react-capstone/countries/LOAD_COUNTRY";
-const BACK_HOME = "react-capstone/countries/BACK_HOME";
+import axios from 'axios';
+
+const LOAD = 'react-capstone/countries/LOAD';
+const REQUEST = 'react-capstone/countries/REQUEST';
+const LOAD_COUNTRY = 'react-capstone/countries/LOAD_COUNTRY';
+const BACK_HOME = 'react-capstone/countries/BACK_HOME';
 
 const initialState = {
   loading: false,
@@ -44,48 +45,38 @@ const countriesReducer = (state = initialState, action) => {
   }
 };
 
-export const loadCountries = (payload) => {
-  return {
-    type: LOAD,
-    payload,
-  };
-};
+export const loadCountries = (payload) => ({
+  type: LOAD,
+  payload,
+});
 
-export const requestCountries = () => {
-  return {
-    type: REQUEST,
-  };
-};
+export const requestCountries = () => ({
+  type: REQUEST,
+});
 
-export const loadCountry = (payload) => {
-  return {
-    type: LOAD_COUNTRY,
-    payload,
-  };
-};
+export const loadCountry = (payload) => ({
+  type: LOAD_COUNTRY,
+  payload,
+});
 
-export const backHome = () => {
-  return {
-    type: BACK_HOME,
-  };
-};
+export const backHome = () => ({
+  type: BACK_HOME,
+});
 
 export const fetchCountries = () => (dispatch) => {
   dispatch(requestCountries());
   axios
-    .get("https://api.covid19tracking.narrativa.com/api/2021-9-4")
+    .get('https://api.covid19tracking.narrativa.com/api/2021-9-4')
     .then((res) => {
-      console.log("res");
-      const countries = Object.entries(res.data.dates["2021-09-04"].countries);
+      const countries = Object.entries(res.data.dates['2021-09-04'].countries);
       const filtered = countries.filter(
-        (country) => country[1].regions.length !== 0
+        (country) => country[1].regions.length !== 0,
       );
       const mapped = filtered.map((country) => country[1]);
       const obj = {
         countries: mapped,
         total: res.data.total,
       };
-      console.log("obj", obj);
       dispatch(loadCountries(obj));
     });
 };

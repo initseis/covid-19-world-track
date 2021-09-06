@@ -1,14 +1,14 @@
-import React from "react";
+import React from 'react';
 import {
   Route,
   HashRouter as Router,
   Switch,
   Redirect,
-} from "react-router-dom";
-import "./App.css";
-import Navbar from "./components/Navbar";
-import Home from "./components/Home";
-import Details from "./components/Details";
+} from 'react-router-dom';
+import './App.css';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import Details from './components/Details';
 
 function App() {
   return (
