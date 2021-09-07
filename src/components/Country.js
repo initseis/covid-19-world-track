@@ -1,8 +1,8 @@
-import React from 'react';
-import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { loadCountry } from '../redux/countries/countries';
-import rightArrow from '../img/right-arrow.svg';
+import React from "react";
+import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+import { loadCountry } from "../redux/countries/countries";
+import rightArrow from "../img/right-arrow.svg";
 
 const Country = ({ country }) => {
   const dispatch = useDispatch();
@@ -24,12 +24,12 @@ const Country = ({ country }) => {
         )}
 
         <h3>
-          {'Confirmed Cases: '}
+          {"Confirmed Cases: "}
           <br />
           {country.today_confirmed}
         </h3>
         <h3>
-          {'Confirmed Deaths: '}
+          {"Confirmed Deaths: "}
           <br />
           {country.today_deaths}
         </h3>

@@ -1,13 +1,13 @@
-import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { backHome } from '../redux/countries/countries';
-import back from '../img/back.svg';
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import { backHome } from "../redux/countries/countries";
+import back from "../img/back.svg";
 
 const Navbar = () => {
   const dispatch = useDispatch();
   const countrySelected = useSelector(
-    (state) => state.countries.countrySelected,
+    (state) => state.countries.countrySelected
   );
 
   if (countrySelected) {
@@ -38,7 +38,14 @@ const Navbar = () => {
   return (
     <header>
       <nav>
-        <h1>Covid-19 World Track</h1>
+        <Link
+          to="/home"
+          onClick={() => {
+            dispatch(backHome());
+          }}
+        >
+          <h1>Covid-19 World Track</h1>
+        </Link>
       </nav>
     </header>
   );
