@@ -1,9 +1,9 @@
 import countriesReducer, {
   requestCountries,
   loadCountries,
-} from "../redux/countries/countries";
+} from '../redux/countries/countries';
 
-test("should return the initial state", () => {
+test('should return the initial state', () => {
   expect(countriesReducer(undefined, {})).toEqual({
     loading: false,
     countries: [],
@@ -12,7 +12,7 @@ test("should return the initial state", () => {
   });
 });
 
-test("should change the loading boolean", () => {
+test('should change the loading boolean', () => {
   const initialState = {
     loading: false,
     countries: [],
@@ -27,10 +27,10 @@ test("should change the loading boolean", () => {
   });
 });
 
-test("should handle a todo being added to an existing list", () => {
-  const payload = "temp";
+test('should handle a todo being added to an existing list', () => {
+  const payload = 'temp';
   const expectedAction = {
-    type: "react-capstone/countries/LOAD",
+    type: 'react-capstone/countries/LOAD',
     payload,
   };
   expect(loadCountries(payload)).toEqual(expectedAction);

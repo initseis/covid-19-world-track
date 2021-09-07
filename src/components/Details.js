@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchCountries, loadCountry } from "../redux/countries/countries";
-import Region from "./Region";
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchCountries, loadCountry } from '../redux/countries/countries';
+import Region from './Region';
 
 const Details = ({ match }) => {
   const countries = useSelector((state) => state.countries.countries);
@@ -19,7 +19,7 @@ const Details = ({ match }) => {
   }, []);
 
   const country = countries.find(
-    (country) => country.id.toString() === match.params.id.toString()
+    (country) => country.id.toString() === match.params.id.toString(),
   );
 
   if (countries.length === 0) {
@@ -30,11 +30,11 @@ const Details = ({ match }) => {
       <main>
         <h2>{country.name.toUpperCase()}</h2>
         <h3>
-          {"Confirmed Cases: "}
+          {'Confirmed Cases: '}
           {country.today_confirmed}
         </h3>
         <h3>
-          {"Confirmed Deaths: "}
+          {'Confirmed Deaths: '}
           {country.today_deaths}
         </h3>
       </main>

@@ -1,18 +1,19 @@
-import axios from "axios";
-jest.mock("axios");
-import React from "react";
-import { render, fireEvent, screen } from "./test-utils";
-import App from "../App";
-import "@testing-library/jest-dom/extend-expect";
-import { waitFor } from "@testing-library/react";
+import { waitFor } from '@testing-library/react';
+import axios from 'axios';
+import React from 'react';
+import { render, fireEvent, screen } from './test-utils';
+import App from '../App';
+import '@testing-library/jest-dom/extend-expect';
 
-const date = new Date().toISOString().replace(/T.*/, "");
+jest.mock('axios');
 
-describe("testing", () => {
+const date = new Date().toISOString().replace(/T.*/, '');
+
+describe('testing', () => {
   const initialData = {
     data: {
-      metadata: "",
-      total: "",
+      metadata: '',
+      total: '',
       dates: {},
     },
   };
@@ -20,33 +21,33 @@ describe("testing", () => {
   initialData.data.dates[date] = {
     countries: {
       Australia: {
-        date: "2021-09-07",
-        id: "australia",
+        date: '2021-09-07',
+        id: 'australia',
         links: [
           {
-            href: "/api/2021-09-04/country/australia",
-            rel: "self",
-            type: "GET",
+            href: '/api/2021-09-04/country/australia',
+            rel: 'self',
+            type: 'GET',
           },
         ],
-        name: "Australia",
-        name_es: "Australia",
-        name_it: "Australia",
+        name: 'Australia',
+        name_es: 'Australia',
+        name_it: 'Australia',
         regions: [
           {
-            date: "2021-09-04",
-            id: "south_australia",
+            date: '2021-09-04',
+            id: 'south_australia',
             links: [
               {
-                href: "/api/2021-09-04/country/australia/region/south_australia",
-                rel: "self",
-                type: "GET",
+                href: '/api/2021-09-04/country/australia/region/south_australia',
+                rel: 'self',
+                type: 'GET',
               },
             ],
-            name: "South Australia",
-            name_es: "South Australia",
-            name_it: "South Australia",
-            source: "John Hopkins University",
+            name: 'South Australia',
+            name_es: 'South Australia',
+            name_it: 'South Australia',
+            source: 'John Hopkins University',
             sub_regions: [],
             today_confirmed: 879,
             today_deaths: 4,
@@ -66,19 +67,19 @@ describe("testing", () => {
             yesterday_recovered: 842,
           },
           {
-            date: "2021-09-04",
-            id: "tasmania",
+            date: '2021-09-04',
+            id: 'tasmania',
             links: [
               {
-                href: "/api/2021-09-04/country/australia/region/tasmania",
-                rel: "self",
-                type: "GET",
+                href: '/api/2021-09-04/country/australia/region/tasmania',
+                rel: 'self',
+                type: 'GET',
               },
             ],
-            name: "Tasmania",
-            name_es: "Tasmania",
-            name_it: "Tasmania",
-            source: "John Hopkins University",
+            name: 'Tasmania',
+            name_es: 'Tasmania',
+            name_it: 'Tasmania',
+            source: 'John Hopkins University',
             sub_regions: [],
             today_confirmed: 235,
             today_deaths: 13,
@@ -98,19 +99,19 @@ describe("testing", () => {
             yesterday_recovered: 221,
           },
           {
-            date: "2021-09-04",
-            id: "queensland",
+            date: '2021-09-04',
+            id: 'queensland',
             links: [
               {
-                href: "/api/2021-09-04/country/australia/region/queensland",
-                rel: "self",
-                type: "GET",
+                href: '/api/2021-09-04/country/australia/region/queensland',
+                rel: 'self',
+                type: 'GET',
               },
             ],
-            name: "Queensland",
-            name_es: "Queensland",
-            name_it: "Queensland",
-            source: "John Hopkins University",
+            name: 'Queensland',
+            name_es: 'Queensland',
+            name_it: 'Queensland',
+            source: 'John Hopkins University',
             sub_regions: [],
             today_confirmed: 1985,
             today_deaths: 7,
@@ -130,19 +131,19 @@ describe("testing", () => {
             yesterday_recovered: 1727,
           },
           {
-            date: "2021-09-04",
-            id: "victoria",
+            date: '2021-09-04',
+            id: 'victoria',
             links: [
               {
-                href: "/api/2021-09-04/country/australia/region/victoria",
-                rel: "self",
-                type: "GET",
+                href: '/api/2021-09-04/country/australia/region/victoria',
+                rel: 'self',
+                type: 'GET',
               },
             ],
-            name: "Victoria",
-            name_es: "Victoria",
-            name_it: "Victoria",
-            source: "John Hopkins University",
+            name: 'Victoria',
+            name_es: 'Victoria',
+            name_it: 'Victoria',
+            source: 'John Hopkins University',
             sub_regions: [],
             today_confirmed: 22942,
             today_deaths: 823,
@@ -162,19 +163,19 @@ describe("testing", () => {
             yesterday_recovered: 20072,
           },
           {
-            date: "2021-09-04",
-            id: "northern_territory",
+            date: '2021-09-04',
+            id: 'northern_territory',
             links: [
               {
-                href: "/api/2021-09-04/country/australia/region/northern_territory",
-                rel: "self",
-                type: "GET",
+                href: '/api/2021-09-04/country/australia/region/northern_territory',
+                rel: 'self',
+                type: 'GET',
               },
             ],
-            name: "Northern Territory",
-            name_es: "Northern Territory",
-            name_it: "Northern Territory",
-            source: "John Hopkins University",
+            name: 'Northern Territory',
+            name_es: 'Northern Territory',
+            name_it: 'Northern Territory',
+            source: 'John Hopkins University',
             sub_regions: [],
             today_confirmed: 202,
             today_deaths: 0,
@@ -194,19 +195,19 @@ describe("testing", () => {
             yesterday_recovered: 193,
           },
           {
-            date: "2021-09-04",
-            id: "new_south_wales",
+            date: '2021-09-04',
+            id: 'new_south_wales',
             links: [
               {
-                href: "/api/2021-09-04/country/australia/region/new_south_wales",
-                rel: "self",
-                type: "GET",
+                href: '/api/2021-09-04/country/australia/region/new_south_wales',
+                rel: 'self',
+                type: 'GET',
               },
             ],
-            name: "New South Wales",
-            name_es: "New South Wales",
-            name_it: "New South Wales",
-            source: "John Hopkins University",
+            name: 'New South Wales',
+            name_es: 'New South Wales',
+            name_it: 'New South Wales',
+            source: 'John Hopkins University',
             sub_regions: [],
             today_confirmed: 33792,
             today_deaths: 180,
@@ -226,19 +227,19 @@ describe("testing", () => {
             yesterday_recovered: 3262,
           },
           {
-            date: "2021-09-04",
-            id: "western_australia",
+            date: '2021-09-04',
+            id: 'western_australia',
             links: [
               {
-                href: "/api/2021-09-04/country/australia/region/western_australia",
-                rel: "self",
-                type: "GET",
+                href: '/api/2021-09-04/country/australia/region/western_australia',
+                rel: 'self',
+                type: 'GET',
               },
             ],
-            name: "Western Australia",
-            name_es: "Western Australia",
-            name_it: "Western Australia",
-            source: "John Hopkins University",
+            name: 'Western Australia',
+            name_es: 'Western Australia',
+            name_it: 'Western Australia',
+            source: 'John Hopkins University',
             sub_regions: [],
             today_confirmed: 1086,
             today_deaths: 9,
@@ -258,19 +259,19 @@ describe("testing", () => {
             yesterday_recovered: 1039,
           },
           {
-            date: "2021-09-04",
-            id: "australian_capital_territory",
+            date: '2021-09-04',
+            id: 'australian_capital_territory',
             links: [
               {
-                href: "/api/2021-09-04/country/australia/region/australian_capital_territory",
-                rel: "self",
-                type: "GET",
+                href: '/api/2021-09-04/country/australia/region/australian_capital_territory',
+                rel: 'self',
+                type: 'GET',
               },
             ],
-            name: "Australian Capital Territory",
-            name_es: "Australian Capital Territory",
-            name_it: "Australian Capital Territory",
-            source: "John Hopkins University",
+            name: 'Australian Capital Territory',
+            name_es: 'Australian Capital Territory',
+            name_it: 'Australian Capital Territory',
+            source: 'John Hopkins University',
             sub_regions: [],
             today_confirmed: 498,
             today_deaths: 3,
@@ -290,7 +291,7 @@ describe("testing", () => {
             yesterday_recovered: 121,
           },
         ],
-        source: "John Hopkins University",
+        source: 'John Hopkins University',
         today_confirmed: 60134,
         today_deaths: 1036,
         today_new_confirmed: 1734,
@@ -310,25 +311,24 @@ describe("testing", () => {
       },
     },
   };
-  console.log("initial", initialData);
   axios.get.mockResolvedValue(initialData);
 
-  test("should render the title", async () => {
+  test('should render the title', async () => {
     render(<App />);
     expect(screen.getByText(/Covid-19 World Track/i)).toBeInTheDocument();
   });
 
-  test("should load the country Australia", async () => {
+  test('should load the country Australia', async () => {
     render(<App />);
     await waitFor(() => {
       expect(screen.getByText(/Australia/i)).toBeInTheDocument();
     });
   });
 
-  test("should go to Australia regions when tap Australia", async () => {
+  test('should go to Australia regions when tap Australia', async () => {
     render(<App />);
     await waitFor(() => {
-      fireEvent.click(screen.getByRole("link", { name: /Australia/i }));
+      fireEvent.click(screen.getByRole('link', { name: /Australia/i }));
       expect(screen.getByText(/Tasmania/i)).toBeInTheDocument();
     });
   });
