@@ -36,6 +36,10 @@ To run tests `npm test` can be used.
 - Twitter: [@sevinchek](https://twitter.com/sevinchek)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/sevinchek)
 
+## Credits
+
+Original design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
