@@ -38,7 +38,14 @@ const Navbar = () => {
   return (
     <header>
       <nav>
-        <h1>Covid-19 World Track</h1>
+        <Link
+          to="/home"
+          onClick={() => {
+            dispatch(backHome());
+          }}
+        >
+          <h1>Covid-19 World Track</h1>
+        </Link>
       </nav>
     </header>
   );

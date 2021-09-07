@@ -8,6 +8,10 @@ const Details = ({ match }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     if (countries.length === 0) {
       dispatch(fetchCountries());
     }

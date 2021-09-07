@@ -65,10 +65,11 @@ export const backHome = () => ({
 
 export const fetchCountries = () => (dispatch) => {
   dispatch(requestCountries());
+  const date = new Date().toISOString().replace(/T.*/, '');
   axios
-    .get('https://api.covid19tracking.narrativa.com/api/2021-9-4')
+    .get(`https://api.covid19tracking.narrativa.com/api/${date}`)
     .then((res) => {
-      const countries = Object.entries(res.data.dates['2021-09-04'].countries);
+      const countries = Object.entries(res.data.dates[date].countries);
       const filteredWithRegions = countries.filter(
         (country) => country[1].regions.length !== 0,
       );
@@ -82,6 +83,9 @@ export const fetchCountries = () => (dispatch) => {
         total: res.data.total,
       };
       dispatch(loadCountries(obj));
+    })
+    .catch((error) => {
+      throw error;
     });
 };
 
