@@ -1,3 +1,23 @@
+@mixin breakpoint($point) {
+  @if $point == small {
+    @media (max-width: 767px) {
+      @content;
+    }
+  }
+
+  @if $point == medium {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $point == large {
+    @media (min-width: 992px) {
+      @content;
+    }
+  }
+}
+
 main {
   padding: 2rem 1.2rem;
   background-image: url("../img/covid-19-pattern.png");
@@ -21,25 +41,99 @@ section {
     display: grid;
     grid-template-columns: 50% 50%;
 
+    @include breakpoint(medium) {
+      grid-template-columns: 33.3% 33.3% 33.3%;
+    }
+
+    @include breakpoint(large) {
+      grid-template-columns: 25% 25% 25% 25%;
+    }
+
     li {
       background-color: #ce4277;
       padding: 1rem;
+
+      @include breakpoint(large) {
+        background-color: #ce4277;
+        background-repeat: no-repeat;
+        background-position: right -20px bottom -10px;
+        background-size: 70px;
+      }
+    }
+
+    li:nth-child(odd) {
+      @include breakpoint(medium) {
+        background-color: #db4680;
+        background-image: url("../img/virus.svg");
+        background-repeat: no-repeat;
+        background-position: right -20px bottom -10px;
+        background-size: 70px;
+      }
+
+      @include breakpoint(large) {
+        background-color: #ce4277;
+        background-image: none;
+      }
     }
 
     li:nth-child(4n) {
-      background-color: #db4680;
-      background-image: url("../img/virus.svg");
-      background-repeat: no-repeat;
-      background-position: right -20px bottom -10px;
-      background-size: 70px;
+      @include breakpoint(small) {
+        background-color: #db4680;
+        background-image: url("../img/virus.svg");
+        background-repeat: no-repeat;
+        background-position: right -20px bottom -10px;
+        background-size: 70px;
+      }
     }
 
     li:nth-child(4n-3) {
-      background-color: #db4680;
-      background-image: url("../img/virus.svg");
-      background-repeat: no-repeat;
-      background-position: right -20px bottom -10px;
-      background-size: 70px;
+      @include breakpoint(small) {
+        background-color: #db4680;
+        background-image: url("../img/virus.svg");
+        background-repeat: no-repeat;
+        background-position: right -20px bottom -10px;
+        background-size: 70px;
+      }
+    }
+
+    li:nth-child(8n-7) {
+      @include breakpoint(large) {
+        background-color: #db4680;
+        background-image: url("../img/virus.svg");
+        background-repeat: no-repeat;
+        background-position: right -20px bottom -10px;
+        background-size: 70px;
+      }
+    }
+
+    li:nth-child(8n-5) {
+      @include breakpoint(large) {
+        background-color: #db4680;
+        background-image: url("../img/virus.svg");
+        background-repeat: no-repeat;
+        background-position: right -20px bottom -10px;
+        background-size: 70px;
+      }
+    }
+
+    li:nth-child(8n-2) {
+      @include breakpoint(large) {
+        background-color: #db4680;
+        background-image: url("../img/virus.svg");
+        background-repeat: no-repeat;
+        background-position: right -20px bottom -10px;
+        background-size: 70px;
+      }
+    }
+
+    li:nth-child(8n) {
+      @include breakpoint(large) {
+        background-color: #db4680;
+        background-image: url("../img/virus.svg");
+        background-repeat: no-repeat;
+        background-position: right -20px bottom -10px;
+        background-size: 70px;
+      }
     }
   }
 
