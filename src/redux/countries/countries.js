@@ -1,9 +1,9 @@
-import axios from 'axios';
+import axios from "axios";
 
-const LOAD = 'react-capstone/countries/LOAD';
-const REQUEST = 'react-capstone/countries/REQUEST';
-const LOAD_COUNTRY = 'react-capstone/countries/LOAD_COUNTRY';
-const BACK_HOME = 'react-capstone/countries/BACK_HOME';
+const LOAD = "react-capstone/countries/LOAD";
+const REQUEST = "react-capstone/countries/REQUEST";
+const LOAD_COUNTRY = "react-capstone/countries/LOAD_COUNTRY";
+const BACK_HOME = "react-capstone/countries/BACK_HOME";
 
 const initialState = {
   loading: false,
@@ -66,12 +66,16 @@ export const backHome = () => ({
 export const fetchCountries = () => (dispatch) => {
   dispatch(requestCountries());
   axios
-    .get('https://api.covid19tracking.narrativa.com/api/2021-9-4')
+    .get("https://api.covid19tracking.narrativa.com/api/2021-9-4")
     .then((res) => {
-      const countries = Object.entries(res.data.dates['2021-09-04'].countries);
-      const filtered = countries.filter(
-        (country) => country[1].regions.length !== 0,
+      const countries = Object.entries(res.data.dates["2021-09-04"].countries);
+      const filteredWithRegions = countries.filter(
+        (country) => country[1].regions.length !== 0
       );
+      const filteredWithoutRegions = countries.filter(
+        (country) => country[1].regions.length === 0
+      );
+      const filtered = filteredWithRegions.concat(filteredWithoutRegions);
       const mapped = filtered.map((country) => country[1]);
       const obj = {
         countries: mapped,
