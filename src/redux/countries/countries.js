@@ -69,9 +69,13 @@ export const fetchCountries = () => (dispatch) => {
     .get('https://api.covid19tracking.narrativa.com/api/2021-9-4')
     .then((res) => {
       const countries = Object.entries(res.data.dates['2021-09-04'].countries);
-      const filtered = countries.filter(
+      const filteredWithRegions = countries.filter(
         (country) => country[1].regions.length !== 0,
       );
+      const filteredWithoutRegions = countries.filter(
+        (country) => country[1].regions.length === 0,
+      );
+      const filtered = filteredWithRegions.concat(filteredWithoutRegions);
       const mapped = filtered.map((country) => country[1]);
       const obj = {
         countries: mapped,
