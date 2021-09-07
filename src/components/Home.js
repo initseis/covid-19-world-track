@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchCountries } from '../redux/countries/countries';
-import Country from './Country';
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchCountries } from "../redux/countries/countries";
+import { loadCountry } from "../redux/countries/countries";
+import Country from "./Country";
 
 const Home = () => {
   const countries = useSelector((state) => state.countries.countries);
@@ -13,29 +14,33 @@ const Home = () => {
     if (countries.length === 0) {
       dispatch(fetchCountries());
     }
+    dispatch(loadCountry(false));
   }, []);
 
   return (
-    <div>
+    <div className="container">
       {total && (
-        <>
-          <h2>Covid in the World</h2>
+        <main>
+          <h2>WORLD</h2>
           <h3>
-            Confirmed cases:
-            {total.today_confirmed || 'loading'}
+            {`Confirmed Cases: `}
+            {total.today_confirmed || "loading"}
           </h3>
           <h3>
-            Confirmed deaths:
-            {total.today_deaths || 'loading'}
+            {`Confirmed Deaths: `}
+            {total.today_deaths || "loading"}
           </h3>
-        </>
+        </main>
       )}
-      {loading && <h2>loading</h2>}
-      <ul>
-        {countries.map((country) => (
-          <Country key={country.id} country={country} />
-        ))}
-      </ul>
+      <section>
+        <h4>STATS BY COUNTRY</h4>
+        {loading && <h2>loading...</h2>}
+        <ul className="countries">
+          {countries.map((country) => (
+            <Country key={country.id} country={country} />
+          ))}
+        </ul>
+      </section>
     </div>
   );
 };
