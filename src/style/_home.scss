@@ -3,10 +3,12 @@ main {
   background-image: url("../img/covid-19-pattern.png");
   background-size: auto;
   background-position: bottom;
+
   h2 {
     font-family: "Gill Sans", sans-serif;
     font-weight: 600;
   }
+
   h3 {
     font-family: "Lato", sans-serif;
     font-weight: 400;
@@ -18,10 +20,12 @@ section {
   .countries {
     display: grid;
     grid-template-columns: 50% 50%;
+
     li {
       background-color: #ce4277;
       padding: 1rem;
     }
+
     li:nth-child(4n) {
       background-color: #db4680;
       background-image: url("../img/virus.svg");
@@ -29,6 +33,7 @@ section {
       background-position: right -20px bottom -10px;
       background-size: 70px;
     }
+
     li:nth-child(4n-3) {
       background-color: #db4680;
       background-image: url("../img/virus.svg");
@@ -37,6 +42,7 @@ section {
       background-size: 70px;
     }
   }
+
   h4 {
     padding: 0.2rem 0 0.2rem 1rem;
     font-family: "Lato", sans-serif;

@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchCountries } from "../redux/countries/countries";
-import { loadCountry } from "../redux/countries/countries";
-import Country from "./Country";
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchCountries, loadCountry } from '../redux/countries/countries';
+import Country from './Country';
 
 const Home = () => {
   const countries = useSelector((state) => state.countries.countries);
@@ -23,12 +22,12 @@ const Home = () => {
         <main>
           <h2>WORLD</h2>
           <h3>
-            {`Confirmed Cases: `}
-            {total.today_confirmed || "loading"}
+            {'Confirmed Cases: '}
+            {total.today_confirmed || 'loading'}
           </h3>
           <h3>
-            {`Confirmed Deaths: `}
-            {total.today_deaths || "loading"}
+            {'Confirmed Deaths: '}
+            {total.today_deaths || 'loading'}
           </h3>
         </main>
       )}
