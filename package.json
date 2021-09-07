@@ -1,5 +1,6 @@
 {
   "name": "metrics-webapp",
+  "homepage": "http://sevinchek.github.io/metrics-webapp",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
