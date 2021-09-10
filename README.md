@@ -1,6 +1,4 @@
-# Project Name
-
-Metrics Webapp
+# Covid-19 World Track
 
 This React capstone project is about building a mobile web application to check a list of metrics (numeric values) about Covid-19 in the world, making use of React and Redux.
 
