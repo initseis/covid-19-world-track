@@ -21,22 +21,26 @@ You can see my page live here:
 ### Installation
 
 1. Clone the repo
+
    ```sh
    git clone git@github.com:sevinchek/covid-19-world-track.git
    ```
 2. Install NPM packages
+
    ```sh
    npm install
    ```
 ### Usage
 
-1. Executing program
+1. Execute program
+
    ```sh
    npm start
    
 ### Tests
    
-1. Running Tests
+1. Run Tests
+
    ```sh
    npm test
 
