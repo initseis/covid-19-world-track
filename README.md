@@ -4,17 +4,17 @@ This React capstone project is about building a mobile web application to check 
 
 ![covid-19-worldtrack](https://user-images.githubusercontent.com/39852288/133872777-afde504f-50ee-4903-9385-8c8c2b53c109.gif)
 
+## Live Demo
+
+You can see my page live here:
+[Check it out!](https://sevinchek.github.io/covid-19-world-track/)
+
 ## Built With
 
 - ![REACT](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)  
 - ![REDUX](https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white)  
 - ![SASS](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)  
 - ![SASS](https://img.shields.io/badge/Jest-15C213?style=for-the-badge&logo=jest&logoColor=white)  
-
-## Live Demo
-
-You can see my page live here:
-[Check it out!](https://sevinchek.github.io/covid-19-world-track/)
 
 ## Getting Started
 
