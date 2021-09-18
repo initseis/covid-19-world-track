@@ -13,8 +13,13 @@ You can see my page live here:
 
 - ![REACT](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)  
 - ![REDUX](https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white)  
+- ![JSON](https://img.shields.io/badge/JSON-20232A?style=for-the-badge&logo=json&logoColor=61DAFB)  
 - ![SASS](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)  
-- ![SASS](https://img.shields.io/badge/Jest-15C213?style=for-the-badge&logo=jest&logoColor=white)  
+- ![JEST](https://img.shields.io/badge/Jest-15C213?style=for-the-badge&logo=jest&logoColor=white)  
+
+## API Provider
+
+- [Narrativa - COVID-19 Tracking API](https://api.covid19tracking.narrativa.com/)
 
 ## Getting Started
 
