@@ -14,7 +14,7 @@ This React capstone project is about building a mobile web application to check 
 ## Live Demo
 
 You can see my page live here:
-[Check it out!](https://sevinchek.github.io/metrics-webapp/)
+[Check it out!](https://sevinchek.github.io/covid-19-world-track/)
 
 ## Getting Started
 
