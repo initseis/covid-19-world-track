@@ -2,7 +2,7 @@
 
 This React capstone project is about building a mobile web application to check a list of metrics (numeric values) about Covid-19 in the world, making use of React and Redux.
 
-![covid-19-worldtrack](https://user-images.githubusercontent.com/39852288/133872777-afde504f-50ee-4903-9385-8c8c2b53c109.gif)
+![covid-19-worldtrack](https://user-images.githubusercontent.com/39852288/133909983-08249186-b1fd-437c-a922-5db329beaca1.gif)
 
 ## Live Demo
 
