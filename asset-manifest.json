@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/metrics-webapp/static/css/main.0592f0f7.chunk.css",
-    "main.js": "/metrics-webapp/static/js/main.494cd03e.chunk.js",
-    "main.js.map": "/metrics-webapp/static/js/main.494cd03e.chunk.js.map",
-    "runtime-main.js": "/metrics-webapp/static/js/runtime-main.20a7962a.js",
-    "runtime-main.js.map": "/metrics-webapp/static/js/runtime-main.20a7962a.js.map",
-    "static/js/2.87c1ed72.chunk.js": "/metrics-webapp/static/js/2.87c1ed72.chunk.js",
-    "static/js/2.87c1ed72.chunk.js.map": "/metrics-webapp/static/js/2.87c1ed72.chunk.js.map",
-    "index.html": "/metrics-webapp/index.html",
-    "static/css/main.0592f0f7.chunk.css.map": "/metrics-webapp/static/css/main.0592f0f7.chunk.css.map",
-    "static/js/2.87c1ed72.chunk.js.LICENSE.txt": "/metrics-webapp/static/js/2.87c1ed72.chunk.js.LICENSE.txt",
-    "static/media/back.6609a556.svg": "/metrics-webapp/static/media/back.6609a556.svg",
-    "static/media/index.scss": "/metrics-webapp/static/media/virus.c0d14ed3.svg",
-    "static/media/right-arrow.df0dac5b.svg": "/metrics-webapp/static/media/right-arrow.df0dac5b.svg"
+    "main.css": "/covid-19-world-track/static/css/main.076ee41d.chunk.css",
+    "main.js": "/covid-19-world-track/static/js/main.494cd03e.chunk.js",
+    "main.js.map": "/covid-19-world-track/static/js/main.494cd03e.chunk.js.map",
+    "runtime-main.js": "/covid-19-world-track/static/js/runtime-main.450facdb.js",
+    "runtime-main.js.map": "/covid-19-world-track/static/js/runtime-main.450facdb.js.map",
+    "static/js/2.87c1ed72.chunk.js": "/covid-19-world-track/static/js/2.87c1ed72.chunk.js",
+    "static/js/2.87c1ed72.chunk.js.map": "/covid-19-world-track/static/js/2.87c1ed72.chunk.js.map",
+    "index.html": "/covid-19-world-track/index.html",
+    "static/css/main.076ee41d.chunk.css.map": "/covid-19-world-track/static/css/main.076ee41d.chunk.css.map",
+    "static/js/2.87c1ed72.chunk.js.LICENSE.txt": "/covid-19-world-track/static/js/2.87c1ed72.chunk.js.LICENSE.txt",
+    "static/media/back.6609a556.svg": "/covid-19-world-track/static/media/back.6609a556.svg",
+    "static/media/index.scss": "/covid-19-world-track/static/media/virus.c0d14ed3.svg",
+    "static/media/right-arrow.df0dac5b.svg": "/covid-19-world-track/static/media/right-arrow.df0dac5b.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.20a7962a.js",
+    "static/js/runtime-main.450facdb.js",
     "static/js/2.87c1ed72.chunk.js",
-    "static/css/main.0592f0f7.chunk.css",
+    "static/css/main.076ee41d.chunk.css",
     "static/js/main.494cd03e.chunk.js"
   ]
 }
